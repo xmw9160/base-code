@@ -13,11 +13,8 @@ public class HashCodeCase {
 
     public static void main(String[] args) {
         Map<Person, String> map = new HashMap<>();
-
         map.put(new Person(1, "a"), "person1");
-
         String result = map.get(new Person(1, "a"));
-
         System.out.println(result);
     }
 }

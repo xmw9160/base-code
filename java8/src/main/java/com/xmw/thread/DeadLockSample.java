@@ -62,6 +62,7 @@ public class DeadLockSample extends Thread {
 //        t2.join();
 //    }
 
+    @Override
     public void run() {
         synchronized (first) {
             System.out.println(this.getName() + " obtained: " + first);
