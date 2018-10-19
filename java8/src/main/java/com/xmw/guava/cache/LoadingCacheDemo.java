@@ -1,11 +1,11 @@
 package com.xmw.guava.cache;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Date 2018/1/28.
@@ -20,7 +20,7 @@ public class LoadingCacheDemo {
                 .build(new CacheLoader<String, String>() {
                     @Override
                     public String load(String key) {
-                        return key;
+                        return "重新加载数据: " + key;
                     }
                 });
         cache.put("j", "java");

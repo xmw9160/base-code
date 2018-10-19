@@ -1,9 +1,9 @@
 package com.xmw.limitflow;
 
-import com.google.common.util.concurrent.RateLimiter;
-
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+
+import com.google.common.util.concurrent.RateLimiter;
 
 /**
  * Date 2018/2/3.

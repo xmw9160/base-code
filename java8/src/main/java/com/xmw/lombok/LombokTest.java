@@ -1,9 +1,5 @@
 package com.xmw.lombok;
 
-import lombok.Cleanup;
-import lombok.NonNull;
-import lombok.val;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,6 +10,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import lombok.Cleanup;
+import lombok.NonNull;
+import lombok.val;
 
 /**
  * Date 2018/1/29.

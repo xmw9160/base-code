@@ -10,6 +10,8 @@ public class SplitterDemo {
 
     /**
      * Splitter 能够将一个字符串按照指定的分隔符拆分成可迭代遍历的字符串集合，Iterable
+     * 对于Splitter，常用的方法是： trimResults()/omitEmptyStrings()。
+     * 注意拆分的方式，有字符串，还有正则，还有固定长度分割.
      */
 
     public static void main(String[] args) {

@@ -1,14 +1,14 @@
 package com.xmw.guava.concurrent;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.sun.istack.internal.Nullable;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executors;
 
 /**
  * Date 2018/1/28.

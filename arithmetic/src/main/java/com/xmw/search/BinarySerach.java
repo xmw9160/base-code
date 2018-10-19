@@ -2,6 +2,7 @@ package com.xmw.search;
 
 /**
  * 二分查找算法实现
+ * 前提: 原始数组有序
  *
  * @author xmw.
  * @date 2018/3/19 23:55.
@@ -21,8 +22,10 @@ public class BinarySerach {
                 return mid;
             }
             if (target > guess) {
+                // 查找数大于中间数,索引需要向后移动
                 low = mid + 1;
             } else {
+                // 查找数小于中间数,索引需要向前移动
                 high = mid - 1;
             }
         }

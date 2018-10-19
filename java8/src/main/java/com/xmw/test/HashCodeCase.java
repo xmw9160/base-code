@@ -1,9 +1,9 @@
 package com.xmw.test;
 
-import com.xmw.test.bean.Person;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.xmw.test.bean.Person;
 
 /**
  * Date 2018/1/27.

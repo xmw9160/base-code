@@ -1,9 +1,9 @@
 package com.xmw.lombok;
 
+import java.util.Date;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 
 /**
  * Date 2018/1/29.

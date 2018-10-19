@@ -1,13 +1,13 @@
 package com.xmw.guava.collection2;
 
+import java.util.Collection;
+import java.util.List;
+
 import com.google.common.base.Function;
 import com.google.common.base.Functions;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
 import com.sun.istack.internal.Nullable;
-
-import java.util.Collection;
-import java.util.List;
 
 /**
  * Date 2018/1/28.

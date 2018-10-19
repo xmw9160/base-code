@@ -8,7 +8,7 @@ import org.apache.commons.lang3.ArrayUtils;
  * @author xmw.
  * @date 2018/3/20 21:22.
  */
-public class RecursionSearch {
+public class RecursionDemo {
 
     /**
      * 求num的阶乘

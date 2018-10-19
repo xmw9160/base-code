@@ -1,10 +1,10 @@
 package com.xmw.guava;
 
-import com.google.common.base.Joiner;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.google.common.base.Joiner;
 
 /**
  * Date 2018/1/28.
@@ -12,9 +12,10 @@ import java.util.Map;
  */
 public class JoinerDemo {
 
-    /*
+    /**
      * Joiner 提供了各种方法来处理字符串加入操作，对象等。
      * Joiner的实例不可变的，因此是线程安全的。
+     * 对于Joiner，常用的方法是 跳过NULL元素：skipNulls() / 对于NULL元素使用其他替代：useForNull(String)
      */
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
 package com.xmw.guava.collection2;
 
-import com.google.common.collect.Sets;
-
 import java.util.Set;
+
+import com.google.common.collect.Sets;
 
 /**
  * Date 2018/1/28.

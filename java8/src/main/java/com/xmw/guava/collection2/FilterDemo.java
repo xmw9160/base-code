@@ -1,10 +1,10 @@
 package com.xmw.guava.collection2;
 
-import com.google.common.collect.Collections2;
-import com.google.common.collect.Lists;
-
 import java.util.Collection;
 import java.util.List;
+
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Lists;
 
 /**
  * Date 2018/1/28.

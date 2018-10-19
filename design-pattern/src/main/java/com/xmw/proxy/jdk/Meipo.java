@@ -15,7 +15,7 @@ public class Meipo implements InvocationHandler {
     private Person target;
 
     // 获取代理人的个人资料
-    public Object getInstance(Person target) throws Exception {
+    public Object getInstance(Person target) {
         this.target = target;
         Class<? extends Person> clazz = target.getClass();
         System.out.println("被代理对象的class是: " + clazz);
