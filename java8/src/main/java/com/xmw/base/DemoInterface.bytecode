@@ -1,0 +1,33 @@
+Classfile /C:/github/base-code/java8/src/main/java/com/xmw/base/DemoInterface.class
+  Last modified 2018-10-22; size 257 bytes
+  MD5 checksum 81e86f0ea90770fa8989b445f644e054
+  Compiled from "DemoInterface.java"
+public interface com.xmw.base.DemoInterface
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_INTERFACE, ACC_ABSTRACT
+Constant pool:
+   #1 = Class              #11            // com/xmw/base/DemoInterface
+   #2 = Class              #12            // java/lang/Object
+   #3 = Utf8               demo
+   #4 = Utf8               Ljava/lang/String;
+   #5 = Utf8               ConstantValue
+   #6 = String             #13            // xiamingwei
+   #7 = Utf8               sayHello
+   #8 = Utf8               (Ljava/lang/String;I)Ljava/lang/Object;
+   #9 = Utf8               SourceFile
+  #10 = Utf8               DemoInterface.java
+  #11 = Utf8               com/xmw/base/DemoInterface
+  #12 = Utf8               java/lang/Object
+  #13 = Utf8               xiamingwei
+{
+  public static final java.lang.String demo;
+    descriptor: Ljava/lang/String;
+    flags: ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String xiamingwei
+
+  public abstract java.lang.Object sayHello(java.lang.String, int);
+    descriptor: (Ljava/lang/String;I)Ljava/lang/Object;
+    flags: ACC_PUBLIC, ACC_ABSTRACT
+}
+SourceFile: "DemoInterface.java"
