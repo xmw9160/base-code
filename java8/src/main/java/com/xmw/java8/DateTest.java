@@ -9,9 +9,12 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Period;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Date;
 
 /**
  * @author mingwei.xia
@@ -31,8 +34,8 @@ public class DateTest {
         int len = date.lengthOfMonth();
         boolean leap = date.isLeapYear();
 
-        LocalDate today = LocalDate.now();
-        System.out.println(today);
+//        LocalDate today = LocalDate.now();
+//        System.out.println(today);
 
         date.get(ChronoField.YEAR);
         date.get(ChronoField.MONTH_OF_YEAR);
@@ -90,5 +93,13 @@ public class DateTest {
         System.out.println(Instant.now());       // 2018-07-06T04:47:25.156Z 没有加时区时间差
         System.out.println(Instant.now().atOffset(ZoneOffset.ofHours(8)));
 
+        LocalDate today = LocalDate.now();
+        //本月的第一天
+        LocalDate firstday = LocalDate.of(today.getYear(), today.getMonth(), 1);
+        //本月的最后一天
+        LocalDate lastDay = today.with(TemporalAdjusters.lastDayOfMonth());
+        System.out.println("本月的第一天" + firstday);
+        System.out.println("本月的最后一天" + lastDay);
+        Date date2 = Date.from(lastDay.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 }
