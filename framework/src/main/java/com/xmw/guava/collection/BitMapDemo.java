@@ -9,6 +9,11 @@ import com.google.common.collect.HashBiMap;
  */
 public class BitMapDemo {
 
+    /**
+     * 在实际场景中有这样的需求吗？比如通过用户ID找到mail，也需要通过mail找回用户名。
+     * 没有guava的时候，我们需要create forward map AND create backward map，
+     * and now just let guava do that for you.
+     */
     public static void main(String[] args) {
         BiMap<String, String> biMap = HashBiMap.create();
         biMap.put("sina", "sina.com");

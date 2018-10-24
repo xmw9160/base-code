@@ -17,6 +17,9 @@ public class MultiMapDemo {
      * 换句话说，Multimap是把键映射到任意多个值的一般方式。
      */
     public static void main(String[] args) {
+        /**
+         * guava所有的集合都有create方法，这样的好处在于简单，而且我们不必在重复泛型信息了
+         */
         Multimap<String, Integer> map = HashMultimap.create(); //Multimap是把键映射到任意多个值的一般方式
         map.put("a", 1); //key相同时不会覆盖原value
         map.put("a", 2);
