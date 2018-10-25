@@ -1,8 +1,12 @@
 package com.xmw.guava;
 
+import java.util.Map;
+
 import com.google.common.base.Splitter;
 
 /**
+ * Guava Splitter
+ * 场景: 按照一定方式切割字符串
  * Date 2018/1/28.
  * Author xmw .
  */
@@ -29,5 +33,11 @@ public class SplitterDemo {
         System.out.println(Splitter.on(",").omitEmptyStrings().split("1,,,,2,,,3"));//[1, 2, 3]
         System.out.println(Splitter.on(" ").trimResults().split("1 2 3")); //[1, 2, 3],默认的连接符是,
         System.out.println(Splitter.on(";").withKeyValueSeparator(":").split("a:1;b:2;c:3"));//{a=1, b=2, c=3}
+
+        // Splitter也提供了一个内部类MapSplitter来处理字符串，返回map集合
+        String mapStr = "i hate u=u hate me...i like u=u like me...i love u=u love me";
+        Splitter.MapSplitter mapSplitter = Splitter.on("...").omitEmptyStrings().withKeyValueSeparator("=");
+        Map<String, String> map = mapSplitter.split(mapStr);
+        map.forEach((key, value) -> System.out.println("key: " + key + ", value: " + value));
     }
 }

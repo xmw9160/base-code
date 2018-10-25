@@ -12,6 +12,11 @@ public class PreconditionsDemo {
      * 前置条件Preconditions提供静态方法来检查方法或构造函数，
      * 被调用是否给定适当的参数。它检查的先决条件。
      * 其方法失败抛出IllegalArgumentException。
+     * checkArgument(boolean expression)：用来校验表达式是否为真，一般用作方法中校验参数
+     * checkState(boolean expression)：校验表达式是否为真，一般用作校验方法返回是否为真。
+     * checkNotNull(T reference)：校验对象是否为空。
+     * checkElementIndex( int index, int size, @Nullable String desc)：校验元素的索引值是否有效，index大于等于0小于size，在无效时显示错误描述信息。
+     * checkPositionIndex(int index, int size, @Nullable String desc)：校验元素的索引值是否有效，index大于等于0小于等于size，在无效时显示错误描述信息。
      */
 
     public static void main(String[] args) {
