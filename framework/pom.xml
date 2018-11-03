@@ -65,6 +65,11 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <!--aviator-->
+        <dependency>
+            <groupId>com.googlecode.aviator</groupId>
+            <artifactId>aviator</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
