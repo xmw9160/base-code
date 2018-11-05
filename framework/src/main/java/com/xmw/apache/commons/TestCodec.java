@@ -1,8 +1,9 @@
 package com.xmw.apache.commons;
 
-import org.apache.commons.codec.binary.Base64;
-
 import java.io.UnsupportedEncodingException;
+
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.digest.Md5Crypt;
 
 /**
  * Codec提供了一些公共的编解码实现，比如Base64, Hex, MD5,Phonetic and URLs等等。
@@ -16,6 +17,9 @@ public class TestCodec {
         System.out.println(encodeTest("xmw.."));
         // xmw..
         decodeTest("eG13Li4=");
+
+        // md5
+        System.out.println(Md5Crypt.md5Crypt("xmw".getBytes()));
     }
 
     //Base64编解码
