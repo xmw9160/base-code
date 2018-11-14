@@ -63,5 +63,13 @@ public class ImmutableCollectionsTest {
                         put("Third", "3");
                     }
                 });
+
+        /**
+         * Maps.uniqueIndex(Iterable,Function)通常针对的场景是：
+         * 有一组对象，它们在某个属性上分别有独一无二的值，而我们希望能够按照这个属性值查找对象
+         * 译者注：这个方法返回一个Map，
+         * 键为Function返回的属性值，值为Iterable中相应的元素，因此我们可以反复用这个Map进行查找操作。
+         */
+//        Maps.uniqueIndex();
     }
 }

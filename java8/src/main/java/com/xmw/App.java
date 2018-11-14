@@ -119,5 +119,10 @@ public class App {
 //        System.out.println('a' + 1 + "Hello"); //98Hello
 
 //        System.out.println(-12/0.00D);  //-Infinity
+
+//        Byte test = 5;
+//        System.out.println(test == 5);              // true
+//        System.out.println(test.equals(5));         // false
+//        System.out.println(test.equals((byte)5));   // true
     }
 }
