@@ -40,6 +40,7 @@ public class MeiPo implements MethodInterceptor {
         // 子类重写了父类的所有方法
         // 我们改变了子类对象的某些属性, 是可以间接的操作父类的属性的
         proxy.invokeSuper(obj, args);
+//        proxy.invoke(obj, args);  // 代理自己调用自己, sof stack over flow
 
         System.out.println("---------------");
         System.out.println("如果合适的话, 准备办事....");

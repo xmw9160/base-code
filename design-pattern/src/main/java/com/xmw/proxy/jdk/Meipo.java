@@ -19,6 +19,8 @@ public class Meipo implements InvocationHandler {
         this.target = target;
         Class<? extends Person> clazz = target.getClass();
         System.out.println("被代理对象的class是: " + clazz);
+        //加上这句将会产生一个$Proxy0.class文件，这个文件即为动态生成的代理类文件
+        //System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
         return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
 
         // 原理:

@@ -70,7 +70,7 @@ public class App {
 //        System.out.println("i=" + i + ",j=" + j);
 
         // ++i 没有中间缓存变量, 理论上比 i++ 更加高效
-        int h = 0;
+//        int h = 0;
         // i++ 是执行完后面的语句, 才加1
         /*
             i++ 有中间缓存变量, i = i++ 等价于
@@ -124,5 +124,20 @@ public class App {
 //        System.out.println(test == 5);              // true
 //        System.out.println(test.equals(5));         // false
 //        System.out.println(test.equals((byte)5));   // true
+//        String str = "        ";
+//        System.out.println(StringUtils.isBlank(str));   // true
+        // str == null || str.length == 0
+//        System.out.println(Strings.isNullOrEmpty(str)); // false
+
+//        System.out.println("1".hashCode());
+//        System.out.println(Integer.valueOf(1).hashCode());
+
+//        Map<Long, String> map = new HashMap<>();
+//        map.put(1L, "11111");
+//        map.put(2L, "222222");
+//        map.put(3L, "333333");
+//        System.out.println(map.get(Integer.valueOf(2).toString()));  // null
+//        System.out.println(map.get(2L));
+//        System.out.println(map.get(Long.valueOf(1)));
     }
 }
