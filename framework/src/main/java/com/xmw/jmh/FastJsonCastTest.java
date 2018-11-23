@@ -39,7 +39,8 @@ public class FastJsonCastTest {
 
     @Benchmark
     public void plainToMap() {
-        Map<Long, String> map = (Map<Long, String>) JSON.parse(json);
+//        Map<Long, String> map = (Map<Long, String>) JSON.parse(json);
+        Map<Long, String> map = JSON.parseObject(json, Map.class);
         logger.info(map.get(320604L));
     }
 
@@ -69,5 +70,11 @@ public class FastJsonCastTest {
      * FastJsonCastTest.plainToMap              thrpt    5  2224.126 ± 451.539  ops/s
      * FastJsonCastTest.typeReferenceToMap      thrpt    5  2036.720 ± 191.616  ops/s
      * FastJsonCastTest.typeReferenceTypeToMap  thrpt    5  2108.515 ± 156.372  ops/s
+     */
+
+    /** fastJson version 1.2.53
+     * FastJsonCastTest.plainToMap              thrpt    5  2738.348 ± 302.697  ops/s
+     * FastJsonCastTest.typeReferenceToMap      thrpt    5  2439.201 ± 269.971  ops/s
+     * FastJsonCastTest.typeReferenceTypeToMap  thrpt    5  2431.446 ± 228.391  ops/s
      */
 }
