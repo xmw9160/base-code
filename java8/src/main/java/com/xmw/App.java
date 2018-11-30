@@ -1,5 +1,8 @@
 package com.xmw;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * Hello world!
  */
@@ -139,5 +142,14 @@ public class App {
 //        System.out.println(map.get(Integer.valueOf(2).toString()));  // null
 //        System.out.println(map.get(2L));
 //        System.out.println(map.get(Long.valueOf(1)));
+
+//        Map<String, String> map2 = new ConcurrentHashMap<>();
+//        String aaa = map2.computeIfAbsent("AAA", key -> map2.computeIfAbsent("CCC", key2 -> "2222"));
+//        System.out.println(aaa);
+
+        Map<String, String> map = new ConcurrentHashMap<>();
+        // AaAa AaBb BbBb BbAa CcCc CCCC CcCc DDDD
+        String s = map.computeIfAbsent("AaAa", key -> map.computeIfAbsent("BBBB", key2 -> "value"));
+        System.out.println(s);
     }
 }
