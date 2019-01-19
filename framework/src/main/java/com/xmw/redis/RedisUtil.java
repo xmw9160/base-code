@@ -16,11 +16,23 @@ public class RedisUtil {
     }
 
     public static Jedis getJedis() {
-        JedisPool jedisPool = new JedisPool("127.0.0.1", 6379);
-        return jedisPool.getResource();
+//        JedisPool jedisPool = new JedisPool("127.0.0.1", 6379);
+//        return jedisPool.getResource();
+        return RedisInstance.REDIS_INSTANCE.getResource();
     }
 
     private static class RedisInstance {
-        private static final Jedis REDIS_INSTANCE = new Jedis("127.0.0.1", 6379);
+        private static final JedisPool REDIS_INSTANCE = new JedisPool("127.0.0.1", 6379);
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 100000; i++) {
+            try (Jedis jedis = getJedis()) {
+                jedis.set("test-" + i, "test-" + i);
+                jedis.expire("test-" + i, 60);
+//                jedis.del("test-" + i);
+            }
+        }
+        System.out.println("execute finish...");
     }
 }
