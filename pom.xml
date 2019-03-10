@@ -16,6 +16,7 @@
         <module>spring-mvc-web</module>
         <module>framework</module>
         <module>mybatis</module>
+        <module>spring</module>
     </modules>
 
     <dependencyManagement>

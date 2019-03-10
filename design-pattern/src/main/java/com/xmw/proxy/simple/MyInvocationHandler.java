@@ -1,4 +1,4 @@
-package com.xmw.proxy.jdk.simple;
+package com.xmw.proxy.simple;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

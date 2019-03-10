@@ -1,4 +1,4 @@
-package com.xmw.proxy.jdk.simple;
+package com.xmw.proxy.simple;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
@@ -6,6 +6,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * http://www.importnew.com/23168.html
+ * http://ifeve.com/jdk%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%BB%A3%E7%90%86%E4%B8%8Ecglib%E4%BB%A3%E7%90%86%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6/
  * VM args: -Dsun.misc.ProxyGenerator.saveGeneratedFiles=true
  * 把JDK动态生成的proxy class 的字节码保存到硬盘中，帮助查看具体生成proxy的内容
  *
@@ -46,7 +47,14 @@ public class JDKProxyTest {
      *  3.interface含有重复的方法签名,以接口传入顺序为准，谁在前面就用谁的方法，代理类中只会保留一个，不会有重复的方法签名；
      */
 
+    /**
+     * 对应JDK动态代理机制是委托机制，具体说动态实现接口类，在动态生成的实现类里面委托为hanlder去调用原始实现类方法。
+     */
+
     public static void main(String[] args) throws Exception {
+
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+
         // 这里有两种写法，我们采用略微复杂的一种写法，这样更有助于大家理解。
         // 生成HelloWorld的代理类, 创建代理类的具体逻辑是通过ProxyClassFactory的apply方法来创建的
         Class<?> proxyClass= Proxy.getProxyClass(JDKProxyTest.class.getClassLoader(), HelloWorld.class);

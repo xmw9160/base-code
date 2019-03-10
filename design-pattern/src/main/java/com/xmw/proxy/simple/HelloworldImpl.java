@@ -1,4 +1,4 @@
-package com.xmw.proxy.jdk.simple;
+package com.xmw.proxy.simple;
 
 public class HelloworldImpl implements HelloWorld {
     @Override
